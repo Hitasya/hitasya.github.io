@@ -1,93 +1,99 @@
 html, body {
-  height: 100%;
-  margin: 0;
-  font-size: 16px;
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  color: #000;
-  background-color: black;
+    height: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    color: #000;
+    background-color: black;
 }
-
-/* header */ 
-
-    .hero-image {
-      background-image: url("https://upload.wikimedia.org/wikipedia/commons/8/8a/Albert_Bierstadt%2C_Among_the_Sierra_Nevada_Mountains.jpg");
-      height: 100%;
-
-      /* Position and center the image to scale nicely on all screens */
-      background-position: 0% 70%;
-      background-repeat: no-repeat;
-      background-size: cover;
-      position: relative;
-      background-attachment: fixed;
-    }
-
-    .hero-text {
-      text-align: center;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%); 
-      color: white;
-      font-family: 'Fredericka the Great', cursive;
-    }
-
-    .taste {
-        background-color: Transparent; 
-    }
-
- 
-
-
-/* content */
-
-  .home_page_image_1, .home_page_image_2, .home_page_image_3 {
-      height: 400px;
-      background-size: cover;
-      position: relative;
-      font-family: 'Fredericka the Great', cursive;
-  } 
-        .home_page_image_1 {
-            background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/d3/Briton_Riviere_-_Daniel%27s_Answer_to_the_King_%28Manchester_Art_Gallery%29.jpg");
-            background-attachment: fixed;
+  
+    /* header */ 
+    
+        .top-of-page-gradient-shadow {
+            height: 12%;
+            background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.61) 6%, rgba(0,0,0,0) 88%, rgba(0,0,0,0) 99%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.61) 6%,rgba(0,0,0,0) 88%,rgba(0,0,0,0) 99%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.61) 6%,rgba(0,0,0,0) 88%,rgba(0,0,0,0) 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
         }
-        .home_page_image_2 {
-            background-image: url("https://upload.wikimedia.org/wikipedia/commons/1/1f/John_glover%2C_danza_d%27indigeni_della_terra_van_diemen_%28tasmania%29_al_chiar_di_luna%2C_1831-45_ca._02.JPG");
-            background-attachment: fixed;
-            background-position: bottom;
+
+        .hero-image {
+        background-image: url("https://upload.wikimedia.org/wikipedia/commons/8/8a/Albert_Bierstadt%2C_Among_the_Sierra_Nevada_Mountains.jpg");
+        height: 100%;
+
+        /* Position and center the image to scale nicely on all screens */
+        background-position: 0% 70%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-attachment: fixed;
         }
-        .home_page_image_3 {
-            background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/de/Ecce_homo_by_Antonio_Ciseri_%281%29.jpg");
-            background-attachment: fixed;
-            background-position: center;
+
+        .hero-text {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+        color: white;
+        font-family: 'Fredericka the Great', cursive;
         }
-        .home_page_image_4 {
-            background-image: url("../Images/serey-morm-352008-unsplash.jpg");
-            background-position: center;
-            opacity: 0.3;
+
+        .button {
+            background-color: Transparent; 
         }
     
-    section {
-        /* Lass die Bildern unter dem Heldenbild die Seiten nicht beruehren */
-
-    }
-        .section_text {
-            text-align: center;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-        }
-
-        .paragraph_light {
-            background-color:#f4f4f4;
-            color:#666;
-            margin: 0;
-        }
-        .paragraph_dark {
-            background-color:#282e34;
-            color:#ddd;
-            margin: 0;
-        }
+    /* content */
+    
+        .home_page_image_1, .home_page_image_2, .home_page_image_3 {
+            height: 400px;
+            background-size: cover;
+            position: relative;
+            font-family: 'Fredericka the Great', cursive;
+        } 
+            .home_page_image_1 {
+                background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/d3/Briton_Riviere_-_Daniel%27s_Answer_to_the_King_%28Manchester_Art_Gallery%29.jpg");
+                background-attachment: fixed;
+            }
+                .home_page_image_1 > a {}
+            .home_page_image_2 {
+                background-image: url("https://upload.wikimedia.org/wikipedia/commons/1/1f/John_glover%2C_danza_d%27indigeni_della_terra_van_diemen_%28tasmania%29_al_chiar_di_luna%2C_1831-45_ca._02.JPG");
+                background-attachment: fixed;
+                background-position: bottom;
+            }
+                .home_page_image_2 > a {}
+            .home_page_image_3 {
+                background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/de/Ecce_homo_by_Antonio_Ciseri_%281%29.jpg");
+                background-attachment: fixed;
+                background-position: center;
+            }
+                .home_page_image_3 > a {}
         
+        section {
+            /* Lass die Bildern unter dem Heldenbild die Seiten nicht beruehren */
+        }
+            .homepage-links > h5 {
+                text-align: center;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: white;
+            }
+            
+            .paragraph-dark, .paragraph-light {
+                margin: 0; 
+                padding: 1em;
+                text-align: center;
+            }
+                .paragraph-light {
+                    background-color:#f4f4f4;
+                    color:#666;
+                    margin: 0;
+                }
+                .paragraph-dark {
+                    background-color:#282e34;
+                    color:#ddd;
+                    margin: 0;
+                }
