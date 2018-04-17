@@ -2,21 +2,34 @@ html, body {
     height: 100%;
     margin: 0;
     font-size: 16px;
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
+    font-family: serif;
+    font-weight: 800;
     color: #000;
-    background-color: black;
+    background-color: #fff;
 }
-  
+.image-top-gradient {
+    height: 12%;
+    background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.61) 6%, rgba(0,0,0,0) 88%, rgba(0,0,0,0) 99%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.61) 6%,rgba(0,0,0,0) 88%,rgba(0,0,0,0) 99%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.61) 6%,rgba(0,0,0,0) 88%,rgba(0,0,0,0) 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+}   
+.image-bottom-gradient {
+    position: absolute;
+    bottom:0;
+    height: 10%;
+    width: 100%;
+
+    background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+    transform: scaleY(-1);
+}
+
     /* header */ 
     
-        .top-of-page-gradient-shadow {
-            height: 12%;
-            background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.61) 6%, rgba(0,0,0,0) 88%, rgba(0,0,0,0) 99%); /* FF3.6-15 */
-            background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.61) 6%,rgba(0,0,0,0) 88%,rgba(0,0,0,0) 99%); /* Chrome10-25,Safari5.1-6 */
-            background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.61) 6%,rgba(0,0,0,0) 88%,rgba(0,0,0,0) 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
-        }
+
 
         .hero-image {
         background-image: url("https://upload.wikimedia.org/wikipedia/commons/8/8a/Albert_Bierstadt%2C_Among_the_Sierra_Nevada_Mountains.jpg");
@@ -52,23 +65,25 @@ html, body {
             position: relative;
             font-family: 'Fredericka the Great', cursive;
         } 
+     
+
             .home_page_image_1 {
                 background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/d3/Briton_Riviere_-_Daniel%27s_Answer_to_the_King_%28Manchester_Art_Gallery%29.jpg");
                 background-attachment: fixed;
+                position: relative;
             }
-                .home_page_image_1 > a {}
             .home_page_image_2 {
                 background-image: url("https://upload.wikimedia.org/wikipedia/commons/1/1f/John_glover%2C_danza_d%27indigeni_della_terra_van_diemen_%28tasmania%29_al_chiar_di_luna%2C_1831-45_ca._02.JPG");
                 background-attachment: fixed;
                 background-position: bottom;
+                position: relative;
             }
-                .home_page_image_2 > a {}
             .home_page_image_3 {
                 background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/de/Ecce_homo_by_Antonio_Ciseri_%281%29.jpg");
                 background-attachment: fixed;
                 background-position: center;
+                position: relative;
             }
-                .home_page_image_3 > a {}
         
         section {
             /* Lass die Bildern unter dem Heldenbild die Seiten nicht beruehren */
@@ -97,3 +112,13 @@ html, body {
                     color:#ddd;
                     margin: 0;
                 }
+
+    /* Footer */
+        
+        footer::before {
+            display: block;
+            height: 35px;
+            content: "";
+            background: url(../images/edge_up_compressed.png) repeat-x scroll 0% 100%/contain #FFF;
+            transform: scaleY(-1);
+        }
