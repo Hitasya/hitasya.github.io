@@ -1,0 +1,16 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-family: serif;
+    font-weight: 400;
+    color: #000;
+    background-color: #fff;
+}
+
+.article-cover {
+    height: 100%;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/6e/Adam_Bernaert_-_%22Vanitas%22_Still_Life_-_Walters_37682.jpg");
+    background-position: center;
+    background-size: cover;
+}
