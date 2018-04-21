@@ -58,9 +58,7 @@ html, body {
                 background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/6e/Adam_Bernaert_-_%22Vanitas%22_Still_Life_-_Walters_37682.jpg");
                 background-position: center;
                 background-size: cover;
-                width: 100%;
                 height: 100vh;
-                object-fit: cover;
                 position: relative;
             }
                 .article-content {
