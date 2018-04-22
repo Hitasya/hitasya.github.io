@@ -7,9 +7,10 @@ html, body {
     color: #000;
   }
 
-    .grid {
+    .grid-container {
         display: grid;
         grid-template-columns: repeat(3, 0.33333fr);
+        grid-template-rows: auto;
         grid-gap: 1em;
     } 
 

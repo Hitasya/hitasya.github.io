@@ -8,9 +8,7 @@ html, body {
     box-sizing: inherit;
 }
 
-/* Header */
-
-    /* Navigation base styles */
+    /* base styles */
     nav {
         color: #fff;
         background-color: rgb(54, 49, 49);
@@ -22,28 +20,29 @@ html, body {
         }
             nav > ul > li > a {
                 text-decoration: none;
+                color: #fff;
                 text-align: center;
                 display: block;
                 padding: 10px; 
             }
 
             
-            /*flex styles */
-            @media screen and (min-width: 768px) {
-                nav {
-                    background-color: transparent;
-                }
-                nav > ul {
-                    display: flex;
-                    justify-content: flex-end;
-                    margin: 0;
-                }
-                    nav > ul > li > a:hover {
-                        background-color: #000;
-                    }
-    }
-
     @media screen and (min-width: 768px) {
+        /* Header */
+        nav {
+            background-color: transparent;
+        }
+        nav > ul {
+            display: flex;
+            justify-content: flex-end;
+            margin: 0;
+        }
+            
+            nav > ul > li > a:hover {
+                background-color: #000;
+            }
+
+        /* Main */    
         .grid-container {
             display: grid;
             grid-template-columns: 1fr;
@@ -74,13 +73,35 @@ html, body {
                     margin: 0;
                 }
 
-            .main-content {
-                grid-area: main;
-
+            main {
+                grid-area: main; justify-self: center;
                 padding: 4em ;
+                font-family: 'Philosopher', sans-serif;
+                color: #333333;
+                width: 768px;
             }
-
-            
+                main > p:first-child::first-letter {
+                    float: left;
+                    font-size: 125px;
+                    background-color: #363F48;
+                    color: #fff;
+                    margin: 5px 15px 15px 0;
+                    padding: 20px;
+                }
+                main h2 {
+                    color: #888;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    font-size: 40px;
+                    margin-top: 4rem;
+                    margin-bottom: 1.5rem;
+                }
+                main p blockquote {
+                    border-left: 5px solid #eee;
+                    margin: 0 15px 20px;
+                    padding: 10px 15px;
+                }   
+                
             
     }
     
