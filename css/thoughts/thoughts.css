@@ -9,12 +9,15 @@ html, body {
 
     .grid-container {
         display: grid;
-        grid-template-columns: repeat(3, 0.33333fr);
+        grid-template-columns: 1fr 1fr 2fr;
         grid-template-rows: auto;
+        grid-template-areas: 
+            "article article .";
         grid-gap: 1em;
     } 
 
         .grid > a {
+            grid-area: article;
             color: inherit;
             text-decoration: none;
         }
@@ -22,4 +25,8 @@ html, body {
             min-height: 125px;
             background-color: #eee;
             padding: 1em;
+        }
+
+        .articles-thumbnail {
+            
         }
