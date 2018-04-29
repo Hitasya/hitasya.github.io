@@ -1,108 +1,68 @@
-/*Background for masthead is unique to each article, and so is not here */
+@import "../../base.css";
+@import "layout.css";
+@import "module.css";
 
-html, body {
-  height: 100%;
-  margin: 0;
-  background-color: #fff;
-  box-sizing: border-box;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-  /* base styles */
-  nav {
-      color: #fff;
-      background-color: rgb(54, 49, 49);
-  }
-      nav > ul {
-          list-style-type: none;
-          padding: 0;
-          display: inline-block;
-      }
-          nav > ul > li > a {
-              text-decoration: none;
-              color: #fff;
-              text-align: center;
-              display: block;
-              padding: 10px; 
-          }
-
-          
-  @media screen and (min-width: 768px) {
-      /* Header */
-      nav {
-          background-color: transparent;
-      }
-      nav > ul {
-          display: flex;
-          justify-content: flex-end;
-          margin: 0;
-      }
-          
-          nav > ul > li > a:hover {
-              background-color: #000;
-          }
-
-      /* Main */    
-      .grid-container {
-          display: grid;
-          grid-template-columns: 1fr;
-          grid-template-rows:  auto;
-          grid-template-areas: 
-              "header"
-              "main"
-              "footer";
-      }
-          .masthead {
-              grid-area: header;
-              background-position: center;
-              background-size: cover;
-              height: 100vh; 
-              position: relative;
-          }
-              .article-content {
-                  position: absolute;
-                  top: 50%; left: 50%; transform: translate(-50%, -50%);
-                  text-align: center;
-                  color: #fff;
-              }
-              .article-content > h1 {
-                  font-family: 'Montserrat', sans-serif;
-                  font-size: 4.6rem;
-                  line-height: 1.1;
-                  margin: 0;
-              }
-
-          main {
-              grid-area: main; justify-self: center;
-              padding: 4em ;
-              font-family: 'Philosopher', sans-serif;
-              color: #333333;
-              width: 768px;
-          }
-              main > p:first-child::first-letter {
-                  float: left;
-                  font-size: 125px;
-                  background-color: #363F48;
-                  color: #fff;
-                  margin: 5px 15px 15px 0;
-                  padding: 20px;
-              }
-              main h2 {
-                  color: #888;
-                  text-transform: uppercase;
-                  font-weight: 700;
-                  font-size: 40px;
-                  margin-top: 4rem;
-                  margin-bottom: 1.5rem;
-              }
-              main p blockquote {
-                  border-left: 5px solid #eee;
-                  margin: 0 15px 20px;
-                  padding: 10px 15px;
-              }   
-              
-          
-  }
+@media screen and (min-width: 768px) {
   
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+    nav a {
+        display: block;
+        padding: 1em;
+    }
+        nav a:hover {
+            background-color: #000;
+        }   
+
+    /* Main article body */
+    main {
+        grid-area: main; justify-self: center;
+        padding: 4em ;
+        font-family: 'Philosopher', sans-serif;
+        color: #333333;
+        width: 768px;
+    }
+        main > p:first-child::first-letter {
+            float: left;
+            font-size: 125px;
+            background-color: #363F48;
+            color: #fff;
+            margin: 5px 15px 15px 0;
+            padding: 20px;
+        }
+        main h2 {
+            color: #888;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 40px;
+            margin-top: 4rem;
+            margin-bottom: 1.5rem;
+        }
+        main p blockquote {
+            border-left: 5px solid #eee;
+            margin: 0 15px 20px;
+            padding: 10px 15px;
+        }   
+        
+        /* Footer */
+        footer::before {
+            display: block;
+            height: 35px;
+            content: "";
+            background: url("../../../images/edge_up_compressed.png") repeat-x scroll 0% 100%/contain #FFF;
+        }
+        footer {
+            background: #000;
+            height: 10em;
+            color: #fff;
+        }
+        footer ul {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 3em;
+        }
+    }
+
+
