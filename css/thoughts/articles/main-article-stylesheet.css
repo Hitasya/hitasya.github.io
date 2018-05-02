@@ -2,6 +2,7 @@
 @import "layout.css";
 @import "module.css";
 
+
 @media screen and (min-width: 768px) {
   
     nav ul {
@@ -16,53 +17,24 @@
             background-color: #000;
         }   
 
+    .masthead__content > h1 {
+        font-size: 4.6875rem;
+        line-height: 1.1;
+    }
+
     /* Main article body */
     main {
-        grid-area: main; justify-self: center;
-        padding: 4em ;
-        font-family: 'Philosopher', sans-serif;
-        color: #333333;
         width: 768px;
     }
         main > p:first-child::first-letter {
-            float: left;
             font-size: 125px;
-            background-color: #363F48;
-            color: #fff;
-            margin: 5px 15px 15px 0;
             padding: 20px;
         }
         main h2 {
-            color: #888;
-            text-transform: uppercase;
-            font-weight: 700;
             font-size: 40px;
             margin-top: 4rem;
             margin-bottom: 1.5rem;
         }
-        main p blockquote {
-            border-left: 5px solid #eee;
-            margin: 0 15px 20px;
-            padding: 10px 15px;
-        }   
-        
-        /* Footer */
-        footer::before {
-            display: block;
-            height: 35px;
-            content: "";
-            background: url("../../../images/edge_up_compressed.png") repeat-x scroll 0% 100%/contain #FFF;
-        }
-        footer {
-            background: #000;
-            height: 10em;
-            color: #fff;
-        }
-        footer ul {
-            display: flex;
-            justify-content: space-evenly;
-            margin-top: 3em;
-        }
-    }
+}
 
 

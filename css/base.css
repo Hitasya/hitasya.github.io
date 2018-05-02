@@ -4,7 +4,7 @@ I highly recommended that you specify a body background. Some users may define t
 */
 
 body {
-  background-color: #fff;
+  background: #F4F4F4;
   color: #000;
   margin: 0;
   box-sizing: border-box;
