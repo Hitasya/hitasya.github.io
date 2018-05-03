@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Philosopher:700");
   
-/* Pure CSS & HTML slider */
+/* ----------------------------------------------Pure CSS & HTML slider */
   #i1, #i2, #i3, #i4, #i5{ display: none;}
 
   .container{
@@ -12,13 +12,13 @@
       height: 0;
       padding-bottom: 38%;
       user-select: none;
-      background-color: #1c1c1c;
+      background-color: #000000;
       border-radius:10px ; 
     }
 
     .container .slide_img{
       position: absolute;
-      width: 100%;;
+      width: 100%;
       height: 100%;
       overflow: hidden;
     }
@@ -27,8 +27,8 @@
       position: relative; left: 50%; transform: translateX(-50%);
     }
     .slide_img__text {
-      position: absolute;
-      top: 50%; left: 50%; transform: translate(-50%,-50%);
+      font-size: 1.5em;
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
       background: rgba(255, 255, 255, 0.75);
       padding: 5%;
     }
@@ -132,15 +132,18 @@
   @media screen  and(min-width: 970px){
     .me{ display: none;}
   }
-/* End of pure CSS & HTML slider */
+/* ------------------------------------------------End of pure CSS & HTML slider */
 
 
 .article-link {
-  background: #fff;
+  background: #000;
+  color: #fff;
   width: 95%;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.03);
-}
-  span {
+  border-radius: 1%;
+  overflow: hidden;
+} 
+  .article-link__image {
     background-size: cover;
     background-position: center;
     display: block;
@@ -151,7 +154,11 @@
     font-family: 'Philosopher', sans-serif;
     font-weight: 700;
     text-align: center;
+    color: #fff
   }
+   h2:hover {
+     color: #f4f4f4;
+   }
 
 footer {
   background: #000;
@@ -164,17 +171,21 @@ footer {
       display: block;
       height: 1em;
       content: "";
-      background: url("../../../images/edge_up_compressed.png") repeat-x scroll 0% 100%/contain #f4f4f4;
+      background: url("../../../images/edge_up_compressed.png") repeat-x scroll 0% 100%/contain #fff;
   }
     ul {
       display: flex;
       justify-content: space-around;
       text-align: center;
       padding: 3em 0;
+      position: absolute; width: 100%; top: 50%; transform: translateY(-50%);
   }
 
+#standing-out {
+  background-image: url("https://img00.deviantart.net/1bda/i/2016/297/3/3/standing_out_by_raipun-dam296z.jpg");
+}
 #pride-vs-vanity {
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/a/ae/StillLifeWithASkull.jpg");
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/StillLifeWithASkull.jpg/1002px-StillLifeWithASkull.jpg");
 }
 #toward-a-type-1-civilization {
   background-image: url("http://www.unawe.org/static/archives/images/screen/TypeIII_civilization.jpg");
