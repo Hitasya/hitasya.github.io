@@ -1,0 +1,40 @@
+@import "../../base.css";
+@import "layout.css";
+@import "module.css";
+
+
+@media screen and (min-width: 768px) {
+  
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+    nav a {
+        display: block;
+        padding: 1em;
+    }
+        nav a:hover {
+            background-color: #000;
+        }   
+
+    .masthead__content > h1 {
+        font-size: 4.6875rem;
+        line-height: 1.1;
+    }
+
+    /* Main article body */
+    main {
+        width: 768px;
+    }
+        main > p:first-child::first-letter {
+            font-size: 125px;
+            padding: 20px;
+        }
+        main h2 {
+            font-size: 40px;
+            margin-top: 4rem;
+            margin-bottom: 1.5rem;
+        }
+}
+
+
