@@ -67,7 +67,7 @@ footer {
         display: block;
         height: 35px;
         content: "";
-        background: url("../../../images/edge_up_compressed.png") repeat-x scroll 0% 100%/contain #f4f4f4;
+        background: url("../../../images/edge_up_compressed.png") repeat-x scroll 0% 100%/contain #fff;
     }
     footer ul {
         display: flex;
