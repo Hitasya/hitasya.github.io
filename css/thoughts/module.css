@@ -181,6 +181,9 @@ footer {
       position: absolute; width: 100%; top: 50%; transform: translateY(-50%);
   }
 
+#morality-from-the-gulags {
+  background-image: url("http://blog.victimsofcommunism.org/wp-content/uploads/2017/08/Gulag-map-1080x641.png");  
+}
 #standing-out {
   background-image: url("https://img00.deviantart.net/1bda/i/2016/297/3/3/standing_out_by_raipun-dam296z.jpg");
 }

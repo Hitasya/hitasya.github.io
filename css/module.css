@@ -1,6 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Fredericka+the+Great");
-
-
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great|Philosopher:700');
 
 .hero-image { /*parallax by javascript plugin */
     height: 100vh;
@@ -15,34 +13,39 @@
     .button {
         background-color: Transparent; 
         font-size: 0.7em;
-        font-family: 'Fredericka the Great', cursive;
+        font-family: 'Philosopher', serif;
     }
     
-.paragraph-dark, .paragraph-light {
-    margin: 0; 
-    padding: 1em;
-    text-align: center;
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-    .paragraph-light {
-        background-color:#f4f4f4;
-        color:#666;
-        margin: 0;
+    .article-preview {
+        padding: 1em 2em;
+        border-top: 1px solid #d3d3d1;
     }
-    .paragraph-dark {
-        background-color:#282e34;
-        color:#ddd;
-        margin: 0;
+    .flex-container > h2 {
+        text-align: center;
+        font-family: 'Fredericka the Great', serif;
     }
-.home-page-image {
-    height: 33.333vh;
-    position: relative;
-}
-    h5 {
-        font-family: 'Fredericka the Great', cursive;
-        margin: 0;
-        color: #fff;
-        position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    .article-preview-link {
+        color: #000;
     }
+        .article-preview-link > h4 {
+            font-family: 'Philosopher', sans-serif;
+            margin: 0;
+        }
+        .article-preview-link:hover {
+            color: #039be5;
+        }
+        .article-thumbnail {
+            float: right;
+            margin: 10px;
+            border-radius: 50%;
+        }
+
 
 footer::before {
     display: block;
