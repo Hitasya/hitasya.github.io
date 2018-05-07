@@ -8,49 +8,96 @@
         position: absolute;
         top: 50%; left: 50%; transform: translate(-50%, -50%); 
         color: #fff;
-        font-family: 'Fredericka the Great', cursive;
+        font-family: 'Fredericka the Great', serif;
     }
     .button {
         background-color: Transparent; 
-        font-size: 0.7em;
-        font-family: 'Philosopher', serif;
+        font-family: 'Fredericka the Great', serif;
     }
-    
+    .button-footer {
+        font-family: 'Philosopher', serif;
+        margin: 20px 0;        
+    }
 
 .flex-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: auto;
 }
-    .article-preview {
-        padding: 1em 2em;
-        border-top: 1px solid #d3d3d1;
-    }
-    .flex-container > h2 {
+        .flex-container > h3 {
         text-align: center;
         font-family: 'Fredericka the Great', serif;
-    }
-    .article-preview-link {
-        color: #000;
-    }
-        .article-preview-link > h4 {
-            font-family: 'Philosopher', sans-serif;
-            margin: 0;
         }
-        .article-preview-link:hover {
-            color: #039be5;
+        .article-preview {
+            padding: 1em 2em;
+            border-top: 1px solid #d3d3d1;
         }
-        .article-thumbnail {
-            float: right;
-            margin: 10px;
-            border-radius: 50%;
+        .article-preview-link > a {
+            color: #000;
         }
-
+            .article-preview-link > a:hover {
+                color: #2BBBAD;
+            }
+            .article-preview-link h5 {
+                font-family: 'Philosopher', sans-serif;
+                margin: 0;
+            }
+            .article-preview-thumbnail-wrapper {
+                float: right;
+                margin: 10px 0 0 0;
+            }
+            .article-preview-thumbnail{
+                border-radius: 50%;
+            }
+            dt {
+                color: #888;
+            }
 
 footer::before {
     display: block;
     height: 35px;
     content: "";
     background: url("../images/edge_up_compressed.png") repeat-x scroll 0% 100%/contain #FFF;
-    transform: scaleY(-1);
+}
+footer {
+    background: #000;
+}
+    .footer-nav {
+        display: flex; flex-direction: column; 
+        align-items: center;
+        padding: 30px 0;
+    }
+        .footer-nav li {
+            padding: 10px;
+        }
+            .footer-nav a {
+                color: #fff;
+            }
+                .footer-nav a:hover {
+                    color: #2BBBAD;
+                }
+
+
+
+@media screen and (min-width: 700px) {
+    .article-preview {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+        .article-preview-link {
+            flex-basis: 60%;
+        }
+    .article-preview-thumbnail {
+        width: 142px; height: 142px;
+    }
+}
+@media screen and (min-width: 1080px) {
+    .hero-text h1 {
+        text-transform: uppercase;
+    }
+    .flex-container {
+        width: 1080px;
+    }
 }
