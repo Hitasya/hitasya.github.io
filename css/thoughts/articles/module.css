@@ -32,13 +32,16 @@ main {
     font-family: 'Philosopher', sans-serif;
     color: #333333;
 }
+    main > p:first-child {
+        font-size: 1.6875rem;
+    }
     main > p:first-child::first-letter {
         float: left;
         font-size: 90px;
         padding: 15px;
         background-color: #363F48;
         color: #fff;
-        margin: 5px 15px 15px 0;
+        margin: 5px 15px 0 0;
     }
     main h2 {
         color: #888;
