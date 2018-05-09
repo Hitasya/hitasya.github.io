@@ -2,9 +2,9 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  grid-gap: 1em;
+  grid-gap: 4em;
   justify-items: center;
-  margin: 2em 0;
+  margin: 5em;
 }
 
 @media screen and (min-width: 768px) {
