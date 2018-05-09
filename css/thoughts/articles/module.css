@@ -1,24 +1,17 @@
 @import url("https://fonts.googleapis.com/css?family=Fredericka+the+Great|Philosopher:400,700");
 
-.masthead {
+header#header {
     grid-area: header;
     height: 100vh; 
     background: transparent;
 }
-    nav {
-        background-color: transparent;
-        text-align: center;
-    }
-      ul a {
-        color: #fff;
-      }
-    .masthead__content {
+    .header__content {
         position: absolute;
         top: 50%; left: 50%; transform: translate(-50%, -50%);
         text-align: center;
         color: #fff;
     }  
-        .masthead__content > h1 {
+        .header__content > h1 {
             font-family: 'Fredericka the Great', sans-serif;
             font-size: 2em;
             line-height: 1.3;
@@ -26,98 +19,164 @@
             text-transform: uppercase;
         }
 
-main {
-    grid-area: main; justify-self: center;
-    padding: 4em 1em;
-    font-family: 'Philosopher', sans-serif;
-    color: #333333;
+/* ------------------------nav */
+.header-nav-wrapper {
+    line-height: 70px;
+    background: transparent;
 }
-    main > p:first-child {
-        font-size: 1.6875rem;
-    }
-    main > p:first-child::first-letter {
-        float: left;
-        font-size: 90px;
-        padding: 15px;
-        background-color: #363F48;
+    .hamburger {
         color: #fff;
-        margin: 5px 15px 0 0;
-    }
-    main h2 {
-        color: #888;
-        text-transform: uppercase;
-        font-weight: 700;
-        font-size: 30px;
-        margin-top: 2rem;
-        margin-bottom: 1.5rem;
-    }
-    blockquote {
-        border-left: 1px solid #DDDDDD;
-        margin: 0 15px 20px;
-        padding: 10px 15px;
-    }
-    img {
-      width: 98%;
-    }
-
-footer {
-    background: #000;
-    color: #fff;
-}    
-    footer::before {
-        display: block;
-        height: 35px;
-        content: "";
-        background: url("../../../images/edge_up_compressed.png") repeat-x scroll 0% 100%/contain #fff;
-    }
-
-    .footer-nav {
-        display: flex; flex-direction: column; 
-        align-items: center;
-        padding: 30px 0;
-    }
-        .footer-nav li {
-            padding: 10px;
-        }
-            .footer-nav a {
-                color: #fff;
-            }
-                .footer-nav a:hover {
-                    color: #2BBBAD;
-                }
-
-
-@media screen and (min-width: 768px) {
-  
-    nav ul {
+        line-height: 70px;
         display: flex;
-        justify-content: flex-end;
+        width: 100%;
+        justify-content: right;
     }
-    nav a {
-        display: block;
-        padding: 1em;
+        .hamburger span {
+            margin: 0 40px 0 0;
+            font-size: 24px;
+            cursor: pointer;
+            -webkit-user-select: none; /* Safari 3.1+ */
+            -moz-user-select: none; /* Firefox 2+ */
+            -ms-user-select: none; /* IE 10+ */
+            user-select: none; /* Standard syntax */
+        }
+    .header-nav {
+        display: none;
+        text-align: center;
+        background: rgba(0,0,0,0.9);
+        position: absolute; width: 100%; z-index: 1;
+        animation: slideDown 1s ease-in-out;
+        font-family: 'Fredericka the Great', sans-serif; font-size: 1.3em;
     }
-        nav a:hover {
-            background-color: #000;
-        }   
-
-    .masthead__content > h1 {
+    @keyframes slideDown{
+        from {
+          transform: translateY(-100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+        li {
+        margin: 10px 0;
+        padding: auto 0;
+        }
+    .header-nav a {
+    text-decoration: none;
+    color: #fff;
+    transition: 1s;
+    }
+        .header-nav a:hover {
+            color: #2BBBAD;
+        }
+    #toggle {
+        display: none;  
+    }
+        #toggle:checked ~ ul {
+            display: block;
+        }
+/* ------------------------------end of nav */        
+        
+        main#body {
+            grid-area: body; justify-self: center;
+            padding: 4em 1em;
+            font-family: 'Philosopher', sans-serif;
+            color: #333333;
+        }
+        main#body > p:first-child {
+            font-size: 1.6875rem;
+        }
+        main#body > p:first-child::first-letter {
+            float: left;
+            font-size: 90px;
+            padding: 15px;
+            background-color: #363F48;
+            color: #fff;
+            margin: 5px 15px 0 0;
+        }
+        main#body h2 {
+            color: #888;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 30px;
+            margin-top: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        blockquote {
+            border-left: 1px solid #DDDDDD;
+            margin: 0 15px 20px;
+            padding: 10px 15px;
+        }
+        img {
+            width: 98%;
+        }
+        
+        footer#footer {
+            background: #000;
+            color: #fff;
+        }    
+            footer#footer::before {
+                display: block;
+                height: 35px;
+                content: "";
+                background: url("../../../images/edge_up_compressed.png") repeat-x scroll 0% 100%/contain #fff;
+            }
+        
+            .footer-nav {
+                display: flex; flex-direction: column; 
+                align-items: center;
+                padding: 30px 0;
+            }
+                .footer-nav li {
+                    padding: 10px;
+                }
+                    .footer-nav a {
+                        color: #fff;
+                    }
+                        .footer-nav a:hover {
+                            color: #2BBBAD;
+                        }
+        
+        
+@media screen and (min-width: 768px) {  
+    .header__content > h1 {
         font-size: 4.6875rem;
         line-height: 1.1;
-    }
-
-
-    main {
+    }  
+    main#body {
         width: 768px;
     }
-        main > p:first-child::first-letter {
+        main#body > p:first-child::first-letter {
             font-size: 125px;
             padding: 20px;
         }
-        main h2 {
+        main#body h2 {
             font-size: 40px;
             margin-top: 4rem;
             margin-bottom: 1.5rem;
         }
 }
 
+@media screen and (min-width: 960px) {
+    .hamburger {
+        display: none;
+    }
+    .header-nav {
+        display: flex;
+        justify-content: right;
+        background: transparent;
+    }
+        .header-nav a {
+            padding: 1em;
+            border-radius: 2px;
+            transition: 1s;
+        }
+            .header-nav a:hover {
+                background: rgba(0,0,0,0.9);
+                color: #fff;
+            }
+}
+
+        
+        

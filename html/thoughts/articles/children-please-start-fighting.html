@@ -16,21 +16,23 @@
     <body>
         <div class="grid-container">
 
-            <header class="masthead" data-speed="0.5" data-src="https://s-i.huffpost.com/gadgets/slideshows/358046/slide_358046_3971324_free.jpg" data-parallax>
-                    <nav>
-                        <ul>
-                            <li><a href="../thoughts.html" target="_blank">My Thoughts</a></li>
-                            <li><a href="../../index.html" target="_blank">Home</a></li>
-                            <li><a href="#" target="_blank">About</a></li>
-                        </ul>
-                    </nav>
-                    <section class="masthead__content">
+            <header id="header" data-speed="0.5" data-src="https://s-i.huffpost.com/gadgets/slideshows/358046/slide_358046_3971324_free.jpg" data-parallax>
+                <nav class="header-nav-wrapper">
+                    <label class="hamburger" for="toggle"><span>&#9776;</span></label>
+                    <input type="checkbox" id="toggle">
+                    <ul class="header-nav">
+                        <li><a href="../thoughts.html" target="_blank"> Thoughts</a></li>
+                        <li><a href="../../index.html" target="_blank">Home</a></li>
+                        <li><a href="#" target="_blank">About</a></li>
+                    </ul>
+                </nav>
+                <section class="header__content">
                     <h1>Children, please start fighting</h1>
                     <div>November 18, 2017</div>
-                    </section>
+                </section>
             </header>
 
-            <main>
+            <main id="body">
                 <p>Creativity doesn’t come from agreement, it comes from good-natured quarrelling. It’s time we teach our children that.</p>
                 
                 <p>When Wilbur and Orville Wright finished their flight at Kitty Hawk, Americans celebrated the brotherly bond. The brothers had grown up playing together, they had been in the newspaper business together, they had built an airplane together. They even said they “thought together.”
@@ -71,14 +73,16 @@
                 </p>
             </main>
 
-            <footer>
-                <ul class="footer-nav">
-                    <li><a href="" target="_blank">Articles</a></li>
-                    <li><a href="" target="_blank">About Me</a></li>
-                    <li><a href="../../../index.html" target="_blank"><i class="fas fa-home"></i></a></li>
-                    <li><a href="" target="_blank">Contact</a></li>
-                    <li><a href="" target="_blank">Gallery</a></li>
-                </ul>
+            <footer id="footer">
+                <nav>
+                    <ul class="footer-nav">
+                        <li><a href="" target="_blank">Articles</a></li>
+                        <li><a href="" target="_blank">About Me</a></li>
+                        <li><a href="../../../index.html" target="_blank"><i class="fas fa-home"></i></a></li>
+                        <li><a href="" target="_blank">Contact</a></li>
+                        <li><a href="" target="_blank">Gallery</a></li>
+                    </ul>
+                </nav>
             </footer>
 
         </div>
