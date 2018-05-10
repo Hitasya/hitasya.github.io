@@ -1,13 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Fredericka+the+Great|Philosopher:400,700");
-#header {
-  display: flex;
-  justify-content: space-around;
-}
-#header h1 {
-  margin: 0;
-  line-height: 70px;
 }
 /* ------------------------nav */
+  #header {
+    display: flex;
+    justify-content: space-around;
+  }
+  #header h1 {
+    margin: 0;
+    line-height: 70px;
+  }
 .header-nav-wrapper {
   line-height: 70px;
   background: transparent;
