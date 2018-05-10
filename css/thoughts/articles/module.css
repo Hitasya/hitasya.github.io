@@ -7,6 +7,7 @@ header#header {
 }
     .header__content {
         position: absolute;
+        z-index: -1;
         top: 50%; left: 50%; transform: translate(-50%, -50%);
         text-align: center;
         color: #fff;
@@ -18,46 +19,57 @@ header#header {
             margin: 0;
             text-transform: uppercase;
         }
+.logo-header {
+    color: #fff;
+    font-size: 34px;
+    margin: 1rem 0;
+
+}
+
 
 /* ------------------------nav */
+.logo-and-nav {
+    display: flex;
+    justify-content: space-around;
+}
 .header-nav-wrapper {
-    line-height: 70px;
     background: transparent;
 }
     .hamburger {
         color: #fff;
-        line-height: 70px;
         display: flex;
         width: 100%;
         justify-content: right;
+        margin: 0;
     }
         .hamburger span {
-            margin: 0 40px 0 0;
-            font-size: 24px;
+            margin: 1rem 0;
+            font-size: 29px;
             cursor: pointer;
             -webkit-user-select: none; /* Safari 3.1+ */
             -moz-user-select: none; /* Firefox 2+ */
             -ms-user-select: none; /* IE 10+ */
             user-select: none; /* Standard syntax */
         }
-    .header-nav {
-        display: none;
-        text-align: center;
-        background: rgba(0,0,0,0.9);
-        position: absolute; width: 100%; z-index: 1;
-        animation: slideDown 1s ease-in-out;
-        font-family: 'Fredericka the Great', sans-serif; font-size: 1.3em;
-    }
-    @keyframes slideDown{
-        from {
-          transform: translateY(-100%);
-          opacity: 0;
+        .header-nav {
+            display: none;
+            text-align: center;
+            background: rgba(0,0,0,0.9);
+            width: 100vw;
+            position: absolute; left: 50%; transform: translateX(-50%);
+            animation: fadeIn 0.2s ease-in-out;
+            font-family: 'Fredericka the Great', sans-serif; font-size: 1.3em;
         }
-        to {
-          transform: translateY(0);
-          opacity: 1;
-        }
-      }
+        @keyframes fadeIn{
+            from {
+              transform: translateX(-50%);
+              opacity: 0;
+            }
+            to {
+              transform: translateX(-50%);
+              opacity: 1;
+            }
+          }
         li {
         margin: 10px 0;
         padding: auto 0;
@@ -176,6 +188,9 @@ header#header {
                 background: rgba(0,0,0,0.9);
                 color: #fff;
             }
+    .logo-header {
+        font-size: 46px;
+    }
 }
 
         

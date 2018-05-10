@@ -1,5 +1,92 @@
-@import url("https://fonts.googleapis.com/css?family=Philosopher:700");
-  
+@import url("https://fonts.googleapis.com/css?family=Fredericka+the+Great|Philosopher:400,700");
+#header {
+  display: flex;
+  justify-content: space-around;
+}
+#header h1 {
+  margin: 0;
+  line-height: 70px;
+}
+/* ------------------------nav */
+.header-nav-wrapper {
+  line-height: 70px;
+  background: transparent;
+}
+  .hamburger {
+      color: #000;
+      display: flex;
+      width: 100%;
+      justify-content: right;
+  }
+      .hamburger span {
+          font-size: 24px;
+          cursor: pointer;
+          -webkit-user-select: none; /* Safari 3.1+ */
+          -moz-user-select: none; /* Firefox 2+ */
+          -ms-user-select: none; /* IE 10+ */
+          user-select: none; /* Standard syntax */
+      }
+  .header-nav {
+      display: none;
+      text-align: center;
+      background: rgba(0,0,0,0.9);
+      width: 100vw;
+      position: absolute; left: 50%; transform: translateX(-50%);
+      z-index: 2; /*for slider is below */
+      animation: fadeIn 0.2s ease-in-out;
+      font-family: 'Fredericka the Great', sans-serif; font-size: 1.3em;
+  }
+  @keyframes fadeIn{
+      from {
+        transform: translateX(-50%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(-50%);
+        opacity: 1;
+      }
+    }
+      li {
+      margin: 10px 0;
+      padding: auto 0;
+      }
+  .header-nav a {
+  color: #fff;
+  transition: 0.1s;
+  }
+      .header-nav a:hover {
+          color: #2BBBAD;
+      }
+  #toggle {
+      display: none;  
+  }
+      #toggle:checked ~ ul {
+          display: block;
+      }
+
+@media screen and (min-width: 685px){
+  .hamburger {
+    display: none;
+  }
+  .header-nav {
+      display: flex;
+      justify-content: right;
+      background: transparent;
+      left: -25%; transform: translate(0,0); /* to rectify the menu once it is not dropdown anymore */
+  }
+    .header-nav a {
+        padding: 1em;
+        border-radius: 2px;
+        transition: 0.2s;
+        color: #000;
+    }
+        .header-nav a:hover {
+            background: rgba(0,0,0,0.9);
+            color: #fff;
+        }
+}
+/* ------------------------------end of nav */  
+
 /* ----------------------------------------------Pure CSS & HTML slider */
   #i1, #i2, #i3, #i4, #i5{ display: none;}
 
@@ -43,7 +130,7 @@
       top:0; 
       background-color: rgba(88, 88, 88,.2);
       color:rgba(244, 244, 244,.9);
-      z-index: 99;
+      z-index: 0;
       transition: .45s;
       cursor: pointer;
       text-align: center;
@@ -70,7 +157,7 @@
     height: 11px;
     position: absolute;
     text-align: center;
-    z-index: 99;
+    z-index: 1;
     cursor: default;
   }
 
@@ -99,7 +186,7 @@
     #i3:checked ~ #three,
     #i4:checked ~ #four ,
     #i5:checked ~ #five 
-    {z-index: 9; animation: scroll 1s ease-in-out;}
+    {z-index: 0; animation: scroll 1s ease-in-out;}
 
     #i1:checked  ~  #nav_slide #dot1,
     #i2:checked  ~  #nav_slide #dot2,
@@ -131,9 +218,6 @@
       width: 12px;
       height: 12px;
     }
-  }
-  @media screen  and(min-width: 970px){
-    .me{ display: none;}
   }
 /* ------------------------------------------------End of pure CSS & HTML slider */
 
@@ -190,6 +274,16 @@ footer {
               color: #2BBBAD;
           }
 
+@media screen and (min-width: 768px) {
+  #header h1{
+    font-size: 34px;
+}
+}
+@media screen and (min-width: 960px) {
+  #header h1 {
+    font-size: 46px;
+  }
+}
 #morality-from-the-gulags {
   background-image: url("http://blog.victimsofcommunism.org/wp-content/uploads/2017/08/Gulag-map-1080x641.png");  
 }
