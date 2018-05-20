@@ -17,15 +17,50 @@
         <div class="grid-container">
 
             <header id="header" data-src="https://img00.deviantart.net/1bda/i/2016/297/3/3/standing_out_by_raipun-dam296z.jpg" data-pos-y="-675px" data-parallax data-speed="0.6">
-                <nav class="header-nav-wrapper">
-                    <label class="hamburger" for="toggle"><span>&#9776;</span></label>
-                    <input type="checkbox" id="toggle">
-                    <ul class="header-nav">
-                        <li><a href="../thoughts.html" target="_blank"> Thoughts</a></li>
-                        <li><a href="../../index.html" target="_blank">Home</a></li>
-                        <li><a href="../../about/about-me.html" target="_blank">About</a></li>
+                <nav class="header-nav">
+                    <ul>
+                        <li><a href="https://facebook.com" target="_blank">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Work</a></lis>
                     </ul>
+                    <div class="button">
+                        <a class="btn-open" href="#"></a>
+                    </div>
                 </nav>
+                <div class="overlay">
+                    <div class="wrap">
+                        <ul class="wrap-nav">
+                            <li><a href="#">About</a>
+                            <ul>
+                                <li><a href="#">About Me</a></li>
+                                <li><a href="#">Favorite artworks</a></li>
+                            </ul>
+                            </li>
+                            <li><a href="#">Services</a>
+                            <ul>
+                                <li><a href="https://www.google.hr/">Writing</a></li>
+                            </ul>
+                            </li>
+                            <li><a href="#">Work</a>
+                            <ul>
+                                <li><a href="#">Web</a></li>
+                            </ul>
+                            </li>
+                        </ul>
+                        <div class="social">
+                            <a href="http://mario-loncarek.from.hr/">
+                            <div class="social-icon">
+                                <i class="fab fa-facebook"></i>
+                            </div>
+                            </a>
+                            <a href="#">
+                            <div class="social-icon">
+                                <i class="fab fa-twitter"></i>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 <section class="header__content">
                     <h1>Standing out</h1>
                     <div>December 23, 2017</div>
@@ -104,6 +139,20 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="../../../javascript/parallax.js-2.0.0-alpha/dist/jquery.parallax.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+            $(".button a").click(function(){
+                $(".overlay").fadeToggle(200);
+            $(this).toggleClass('btn-open').toggleClass('btn-close');
+            });
+        });
+        $('.overlay').on('click', function(){
+            $(".overlay").fadeToggle(200);   
+            $(".button a").toggleClass('btn-open').toggleClass('btn-close');
+            open = false;
+        });
+        </script>
         
     </body>
 </html>

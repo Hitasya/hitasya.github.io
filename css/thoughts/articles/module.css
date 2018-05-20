@@ -23,72 +23,200 @@ header#header {
     color: #fff;
     font-size: 34px;
     margin: 1rem 0;
-
 }
 
 
-/* ------------------------nav */
-.logo-and-nav {
-    display: flex;
-    justify-content: space-around;
+/* ------ CodePen nav --------- */  
+
+.header-nav {
+	text-align:center;
+	width:100%;
+	position:relative;
+	height:auto;
+	overflow:hidden;
+	background:none;
 }
-.header-nav-wrapper {
-    background: transparent;
+.header-nav ul {
+	text-align:center;
 }
-    .hamburger {
-        color: #fff;
-        display: flex;
-        width: 100%;
-        justify-content: right;
-        margin: 0;
-    }
-        .hamburger span {
-            margin: 1rem 0;
-            font-size: 29px;
-            cursor: pointer;
-            -webkit-user-select: none; /* Safari 3.1+ */
-            -moz-user-select: none; /* Firefox 2+ */
-            -ms-user-select: none; /* IE 10+ */
-            user-select: none; /* Standard syntax */
-        }
-        .header-nav {
-            display: none;
-            text-align: center;
-            background: rgba(0,0,0,0.9);
-            width: 100vw;
-            position: absolute; left: 50%; transform: translateX(-50%);
-            animation: fadeIn 0.2s ease-in-out;
-            font-family: 'Fredericka the Great', sans-serif; font-size: 1.3em;
-        }
-        @keyframes fadeIn{
-            from {
-              transform: translateX(-50%);
-              opacity: 0;
-            }
-            to {
-              transform: translateX(-50%);
-              opacity: 1;
-            }
-          }
-        li {
-        margin: 10px 0;
-        padding: auto 0;
-        }
-    .header-nav a {
-    text-decoration: none;
-    color: #fff;
-    transition: 1s;
-    }
-        .header-nav a:hover {
-            color: #2BBBAD;
-        }
-    #toggle {
-        display: none;  
-    }
-        #toggle:checked ~ ul {
-            display: block;
-        }
-/* ------------------------------end of nav */        
+.header-nav ul li {
+	display:inline-block;
+}
+.header-nav ul li a {
+	color:#fff;
+	display:inline-block;
+	padding:1em 3em;
+	transition-property:all .2s linear 0s;
+	-moz-transition:all .2s linear 0s;
+	-webkit-transition:all .2s linear 0s;
+	-o-transition:all .2s linear 0s;
+	font-size:16px;
+}
+.header-nav ul li a:hover {
+	color: #34B484;
+}
+/*styling open close button*/
+.button {
+	display:inline;
+	position:absolute;
+	right:50px;
+	top:6px;
+	z-index:999;
+	font-size:30px;
+}
+.button a {
+	text-decoration:none;
+}
+.btn-open:after {
+	color:#fff;
+	content: "☰";
+	font-family:"FontAwesome";
+	transition-property:all .2s linear 0s;
+	-moz-transition:all .2s linear  0s;
+	-webkit-transition:all .2s linear 0s;
+	-o-transition:all .2s linear 0s;
+}
+.btn-open:hover:after {
+	color:#34B484;
+}
+.btn-close:after {
+	color:#fff;
+	content:"☰";
+	font-family:"FontAwesome";
+	transition-property:all .2s linear 0s;
+	-moz-transition:all .2s linear 0s;
+	-webkit-transition:all .2s linear 0s;
+	-o-transition:all .2s linear 0s;
+}
+.btn-close:hover:after {
+	color: #34B484;
+}
+/*overlay*/
+.overlay {
+	display:none;
+	position: absolute;
+	top:0;
+	height:100%;
+	width:100%;
+	background:#333;
+	overflow:auto;
+	z-index:999;
+}
+.wrap {
+	color:#e9e9e9;
+	text-align:center;
+	max-width:90%;
+	margin:0 auto;
+}
+.wrap ul.wrap-nav {
+	border-bottom:1px solid #575757;
+	text-transform:capitalize;
+	padding:150px 0px 100px;
+}
+.wrap ul.wrap-nav li {
+	font-size:20px;
+	display:inline-block;
+	vertical-align:top;
+	width:24%;
+	position:relative;
+}
+.wrap ul.wrap-nav li a {
+	color:#34B484;
+	display:inline-block;	
+	padding:8px 0;
+	text-decoration:none;
+	transition-property:all .2s linear 0s;
+	-moz-transition:all .2s linear 0s;
+	-webkit-transition:all .2s linear 0s;
+	-o-transition:all .2s linear 0s;
+}
+.wrap ul.wrap-nav li a:hover {
+	color:#f0f0f0;
+}
+.wrap ul.wrap-nav ul {
+	padding:20px 0;
+}
+.wrap ul.wrap-nav ul li {
+	display:block;
+	font-size:13px;
+	width:100%;
+	color:#e9e9e9;
+}
+.wrap ul.wrap-nav ul li a {
+	color:#f0f0f0;
+}
+.wrap ul.wrap-nav ul li a:hover {
+	color:#34B484;
+}
+.social {
+	font-size:25px;
+  padding:20px;
+  display: flex; justify-content: center; 
+}
+.social p {
+	margin:0;
+	padding:20px 0 5px 0;
+	line-height:30px;
+	font-size:13px;
+}
+.social p a {
+	color:#34B484;
+	text-decoration:none;
+	margin:0;
+	padding:0;
+}
+.social-icon {
+	width:80px;
+	height:50px;
+	background:#e9e9e9;
+	color:#333;
+  	display:flex; justify-content: center; 
+	margin:0 20px;
+	transition-property:all .2s linear 0s;
+	-moz-transition:all .2s linear 0s;
+	-webkit-transition:all .2s linear 0s;
+	-o-transition:all .2s linear 0s;
+}
+.social-icon:hover {
+	background:#34B484;
+	color:#f0f0f0;
+}
+.social-icon i {
+	margin-top:12px;
+}
+@media screen and (max-width:48em) {
+	.wrap ul.wrap-nav>li {
+		width:100%;
+		padding:20px 0;
+		border-bottom:1px solid #575757;
+	}
+	.wrap ul.wrap-nav {
+		padding:30px 0px 0px;
+	}
+	.header-nav ul {
+		opacity:0;
+		visibility:hidden;
+	}
+	.social {
+		color:#c1c1c1;
+		font-size:25px;
+		padding:15px 0;
+	}
+	.social-icon {
+		height:50px;
+		background:#fff;
+		color:#333;
+		display:block;
+	}
+}
+.content {
+	width:100%;
+	margin-top:200px;
+	font-size:20px;
+	color:#333;
+	text-align: center;
+}
+/* ------------------ End of CodePen nav -------------- */       
         
         main#body {
             grid-area: body; justify-self: center;
@@ -168,29 +296,6 @@ header#header {
             margin-top: 4rem;
             margin-bottom: 1.5rem;
         }
-}
-
-@media screen and (min-width: 960px) {
-    .hamburger {
-        display: none;
-    }
-    .header-nav {
-        display: flex;
-        justify-content: right;
-        background: transparent;
-    }
-        .header-nav a {
-            padding: 1em;
-            border-radius: 2px;
-            transition: 1s;
-        }
-            .header-nav a:hover {
-                background: rgba(0,0,0,0.9);
-                color: #fff;
-            }
-    .logo-header {
-        font-size: 46px;
-    }
 }
 
         
