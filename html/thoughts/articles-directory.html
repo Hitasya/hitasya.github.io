@@ -6,78 +6,111 @@
     
     <title>Thoughts | Sai</title>
     
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../../css/thoughts/main-thoughts-stylesheet.css">
 </head>
 
 <body>
-    
-    <header id="header">
-            <h1>&Psi;</h1>
-            <nav class="header-nav-wrapper">
-                <label class="hamburger" for="toggle"><span>&#9776;</span></label>
-                <input type="checkbox" id="toggle">
-                <ul class="header-nav">
-                    <li><a href="../thoughts.html" target="_blank"> Thoughts</a></li>
-                    <li><a href="../../index.html" target="_blank">Home</a></li>
-                    <li><a href="../about/about-me.html" target="_blank">About</a></li>
+
+    <nav class="header-nav">
+        <ul>
+            <li><a href="https://facebook.com" target="_blank">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Work</a></li>
+        </ul>
+        <div class="button">
+            <a class="btn-open" href="#"></a>
+        </div>
+    </nav>
+    <div class="overlay">
+        <div class="wrap">
+            <ul class="wrap-nav">
+                <li><a href="#">About</a>
+                <ul>
+                    <li><a href="#">About Me</a></li>
+                    <li><a href="#">Favorite artworks</a></li>
                 </ul>
-            </nav>          
-    </header>
+                </li>
+                <li><a href="#">Services</a>
+                <ul>
+                    <li><a href="https://www.google.hr/">Writing</a></li>
+                </ul>
+                </li>
+                <li><a href="#">Work</a>
+                <ul>
+                    <li><a href="#">Web</a></li>
+                </ul>
+                </li>
+            </ul>
+            <div class="social">
+                <a href="http://mario-loncarek.from.hr/">
+                <div class="social-icon">
+                    <i class="fab fa-facebook"></i>
+                </div>
+                </a>
+                <a href="#">
+                <div class="social-icon">
+                    <i class="fab fa-twitter"></i>
+                </div>
+                </a>
+            </div>
+        </div>
+    </div>
 
 
-        <div class="slider-container">
+
+    <div class="slider-container">
+    
+        <input type="radio" id="i1" name="images" checked />
+        <input type="radio" id="i2" name="images" />
+        <input type="radio" id="i3" name="images" />
+        <input type="radio" id="i4" name="images" />
+        <input type="radio" id="i5" name="images" />	
         
-            <input type="radio" id="i1" name="images" checked />
-            <input type="radio" id="i2" name="images" />
-            <input type="radio" id="i3" name="images" />
-            <input type="radio" id="i4" name="images" />
-            <input type="radio" id="i5" name="images" />	
+        <div class="slide_img" id="one">			
+                
+                <img src="http://blog.victimsofcommunism.org/wp-content/uploads/2017/08/Gulag-map-1080x641.png">
+                <section class="slide_img__text">Morality from the Gulags</section>
+                
+                    <label class="prev" for="i5"><div class="arrow">&#x2039;</div></label>
+                    <label class="next" for="i2"><div class="arrow">&#x203a;</div></label>	
             
-            <div class="slide_img" id="one">			
-                    
-                    <img src="http://blog.victimsofcommunism.org/wp-content/uploads/2017/08/Gulag-map-1080x641.png">
-                    <section class="slide_img__text">Morality from the Gulags</section>
-                    
-                        <label class="prev" for="i5"><div class="arrow">&#x2039;</div></label>
-                        <label class="next" for="i2"><div class="arrow">&#x203a;</div></label>	
-                
-            </div>
+        </div>
+        
+        <div class="slide_img" id="two">
             
-            <div class="slide_img" id="two">
+                <img src="https://img00.deviantart.net/1bda/i/2016/297/3/3/standing_out_by_raipun-dam296z.jpg" >
+                <section class="slide_img__text">Standing out</section>
+    
+                    <label class="prev" for="i1"><div class="arrow">&#x2039;</div></label>
+                    <label class="next" for="i3"><div class="arrow">&#x203a;</div></label>
+            
+        </div>
                 
-                    <img src="https://img00.deviantart.net/1bda/i/2016/297/3/3/standing_out_by_raipun-dam296z.jpg" >
-                    <section class="slide_img__text">Standing out</section>
-        
-                        <label class="prev" for="i1"><div class="arrow">&#x2039;</div></label>
-                        <label class="next" for="i3"><div class="arrow">&#x203a;</div></label>
+        <div class="slide_img" id="three">
+                <img src="https://s-i.huffpost.com/gadgets/slideshows/358046/slide_358046_3971324_free.jpg">	
+                <section class="slide_img__text">Children, please start fighting</section>
+    
+                    <label class="prev" for="i2"><div class="arrow">&#x2039;</div></label>
+                    <label class="next" for="i4"><div class="arrow">&#x203a;</div></label>
+        </div>
+    
+        <div class="slide_img" id="four">
+                <img src="http://www.unawe.org/static/archives/images/screen/TypeIII_civilization.jpg">	
+                <section class="slide_img__text">Toward a type-1 civilization</section>
                 
-            </div>
-                    
-            <div class="slide_img" id="three">
-                    <img src="https://s-i.huffpost.com/gadgets/slideshows/358046/slide_358046_3971324_free.jpg">	
-                    <section class="slide_img__text">Children, please start fighting</section>
-        
-                        <label class="prev" for="i2"><div class="arrow">&#x2039;</div></label>
-                        <label class="next" for="i4"><div class="arrow">&#x203a;</div></label>
-            </div>
-        
-            <div class="slide_img" id="four">
-                    <img src="http://www.unawe.org/static/archives/images/screen/TypeIII_civilization.jpg">	
-                    <section class="slide_img__text">Toward a type-1 civilization</section>
-                    
-                        <label class="prev" for="i3"><div class="arrow">&#x2039;</div></label>
-                        <label class="next" for="i5"><div class="arrow">&#x203a;</div></label>
-            </div>
-        
-            <div class="slide_img" id="five">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/StillLifeWithASkull.jpg/1002px-StillLifeWithASkull.jpg">	
-                    <section class="slide_img__text">Pride vs Vanity</section>
-                    
-                        <label class="prev" for="i4"><div class="arrow">&#x2039;</div></label>
-                        <label class="next" for="i1"><div class="arrow">&#x203a;</div></label>
-        
-            </div>
+                    <label class="prev" for="i3"><div class="arrow">&#x2039;</div></label>
+                    <label class="next" for="i5"><div class="arrow">&#x203a;</div></label>
+        </div>
+    
+        <div class="slide_img" id="five">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/StillLifeWithASkull.jpg/1002px-StillLifeWithASkull.jpg">	
+                <section class="slide_img__text">Pride vs Vanity</section>
+                
+                    <label class="prev" for="i4"><div class="arrow">&#x2039;</div></label>
+                    <label class="next" for="i1"><div class="arrow">&#x203a;</div></label>
+    
+        </div>
         
             <div id="nav_slide">
                 <label for="i1" class="dots" id="dot1"></label>
@@ -125,6 +158,28 @@
     </footer>   
 
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        $(".button a").click(function(){
+            $(".overlay").fadeToggle(200);
+        $(this).toggleClass('btn-open').toggleClass('btn-close');
+        });
+    });
+    $('.overlay').on('click', function(){
+        $(".overlay").fadeToggle(200);   
+        $(".button a").toggleClass('btn-open').toggleClass('btn-close');
+        open = false;
+    });
+    </script>
+
+
+
+
+
+
+
+
 
 </body>
 
