@@ -784,12 +784,54 @@ var Parallax = function () {
     _parsePos('posY', 'top', 'bottom');
 
     // match returns null if regex is null i.e. falsy, no additional checks needed
-    if (navigator.userAgent.match(options.excludeAgents)) {
+    /* if (navigator.userAgent.match(options.excludeAgents)) {
       // todo: enhance
       if (options.src && !$window.is('img')) {
         $window.css('background', 'url("' + options.src + '") ' + options.pos + '/cover');
       }
-    } else {
+    }
+    */ // I commented out this section to fix the parallax issue for mobiles. see code below
+
+              if (navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
+                if (this.iosFix) {
+                  if (!this.imageSrc) {
+                    var img = this.$element.find('>.parallax-slider>img');
+                    if (img.length == 1) {
+                      this.imageSrc = img[0].currentSrc || img.attr('src');
+                      this.$element.find('>.parallax-slider').remove();
+                    }
+                  }
+                  if (this.imageSrc && this.androidFix && !this.$element.is('img')) {
+                    this.$element.css({
+                      backgroundImage: 'url(' + this.imageSrc + ')',
+                      backgroundSize: 'cover',
+                      backgroundPosition: this.position
+                    });
+                  }
+                }
+                return this;
+              }
+              
+              if (navigator.userAgent.match(/(Android)/)) {
+                if (this.androidFix) {
+                  if (!this.imageSrc) {
+                    var img = this.$element.find('>.parallax-slider>img');
+                    if (img.length == 1) {
+                      this.imageSrc = img[0].currentSrc || img.attr('src');
+                      this.$element.find('>.parallax-slider').remove();
+                    }
+                  }
+                  if (this.imageSrc && this.androidFix && !this.$element.is('img')) {
+                    this.$element.css({
+                      backgroundImage: 'url(' + this.imageSrc + ')',
+                      backgroundSize: 'cover',
+                      backgroundPosition: this.position
+                    });
+                  }
+                }
+                return this;
+              } // end of copy-pasted code from issues page of this library's github page: https://github.com/pixelcog/parallax.js/issues/184
+    else {
 
       if (options.scrollingSelector) {
         Parallax.scrollingElement = (0, _jquery2.default)(options.scrollingSelector)[0];
