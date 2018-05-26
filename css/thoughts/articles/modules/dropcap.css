@@ -1,0 +1,11 @@
+main#body > p:first-child::first-letter {
+    float: left;
+    padding: 15px;
+    margin: 5px 15px 0 0;
+}
+
+@media screen and (min-width: 768px) {
+    main#body > p:first-child::first-letter {
+        padding: 20px;
+    }
+}

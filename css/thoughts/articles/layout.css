@@ -8,5 +8,25 @@
         "footer";
 }
 
+header#header {
+  grid-area: header;
+  height: 100vh; 
+  background: transparent;
+}
 
+main#body {
+  grid-area: body; justify-self: center;
+  padding: 4em 1em;
+}
+
+footer#footer {
+  grid-area: footer;
+}
+
+
+@media screen and (min-width: 768px) {  
+  main#body {
+      width: 768px;
+  }
+}
 

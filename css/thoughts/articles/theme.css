@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css?family=Fredericka+the+Great|Philosopher:400,700");
+
+/*************************************************************
+************************************************************/
+
+:root {
+    --trim-color: #34B484;
+}
+
+main#body {
+    font-family: 'Philosopher', sans-serif;
+    color: #333;
+}
+
+    main#body > p:first-child {
+        font-size: 1.6875rem;
+    }
+
+        main#body > p:first-child::first-letter {
+            font-size: 90px;
+            background-color: #363F48;
+            color: #fff;
+        }
+        main#body h2 {
+            color: #888;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 30px;
+        }
+
+blockquote {
+    border-left: 1px solid #DDDDDD;
+}
+
+footer::before {
+    content: "";
+    background: url("../../../images/edge_up_compressed.png") repeat-x scroll 0% 100%/contain #fff; 
+}
+footer#footer {
+    background: #000;
+    color: #fff;
+}    
+    .footer-nav a {
+        color: #fff;
+    }
+        .footer-nav a:hover {
+            color: var(--trim-color);
+        }
+
+/*************************************************************
+************************************************************/
+
+@media screen and (min-width: 768px) {
+    main#body > p:first-child::first-letter {
+        font-size: 125px;
+    }
+    main#body h2 {
+        font-size: 40px;
+    }
+}
