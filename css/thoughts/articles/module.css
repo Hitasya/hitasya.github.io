@@ -1,7 +1,7 @@
 @import url('modules/header-content.css');
 @import url('modules/nav.css');
-@import url('modules/footer-nav.css');
-@import url('modules/footer-before.css');
+@import url('../../modules/footer-nav.css');
+@import url('../../modules/footer-before.css');
 @import url('modules/dropcap.css');
 @import url('modules/blockquote.css');
 @import url('modules/article-img.css');

@@ -1,0 +1,37 @@
+.article-preview {
+    padding: 1em 2em;
+}
+    .article-preview-link h5 {
+        font-family: 'Philosopher', sans-serif;
+        margin: 0;
+    }
+    .article-preview-thumbnail-wrapper {
+        float: right;
+        margin: 10px 0 0 0;
+    }
+    .article-preview-thumbnail{
+        border-radius: 50%;
+    }
+
+/***********************************************************
+************************************************************/    
+
+@media screen and (min-width: 1080px) {
+    .article-preview {
+        display: flex; flex-direction: row;
+        /* justify-content: space-around; */
+        align-items: center;
+    }
+        .article-preview-link {
+            flex-basis: 60%;
+        }
+    .article-preview-thumbnail-wrapper {
+        flex-basis: 20%;
+    }
+        .article-preview-thumbnail {
+            width: 142px; height: 142px;
+        }
+    .article-preview-meta {
+        flex-basis: 20%;
+    }
+}

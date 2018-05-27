@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great|Philosopher:700');
+
+:root {
+    --trim-color: #34B484;
+}
+
+.hero-text {
+    color: #fff;
+    font-family: 'Fredericka the Great', serif;
+    
+    -webkit-user-select: none; /* Safari 3.1+ */
+    -moz-user-select: none; /* Firefox 2+ */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none; /* Standard syntax */
+}
+
+.button {
+    background-color: Transparent;
+    font-size: 0.7em; 
+    font-family: 'Fredericka the Great', serif;
+}
+.button-footer {
+    font-family: 'Philosopher', serif;
+}
+
+.flex-container > h3 {
+    font-family: 'Fredericka the Great', serif;
+    }
+    .article-preview {
+        border-top: 1px solid #d3d3d1;
+    }
+    .article-preview-link > a {
+        color: #000;
+    }
+        .article-preview-link > a:hover {
+            color: var(--trim-color);
+        }
+        dt {
+            color: #888;
+        }
+
+
+footer#footer::before {
+    content: "";
+    background: url("../../../images/edge_up_compressed.png") repeat-x scroll 0% 100%/contain #fff; 
+}
+footer#footer {
+    background: #000;
+    color: #fff;
+}    
+    .footer-nav a {
+        color: #fff;
+    }
+        .footer-nav a:hover {
+            color: var(--trim-color);
+        }
+
+/*************************************************************
+************************************************************/
+
+@media screen and (min-width: 700px) {
+    .button {
+        font-size: 1em;
+    }
+    .button-footer {
+        font-size: 2em;
+    }
+    
+}
+
+/*************************************************************
+************************************************************/
+
+@media screen and (min-width: 1080px) {
+    .hero-text h1 {
+        text-transform: uppercase;
+    }
+    
+}
