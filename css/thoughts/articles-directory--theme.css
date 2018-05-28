@@ -25,3 +25,7 @@ footer#footer {
 .btn-open:after {
     color: #000;
 }
+.social a {
+    background: #fff;
+    color: #333;
+}

@@ -9,3 +9,8 @@ h2:hover {
 .header-nav ul li a:hover {
     color: var(--trim-color);
 }
+
+.social a:hover {
+    background-color: var(--trim-color);
+    color: #fff;
+}
