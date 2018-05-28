@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css?family=Fredericka+the+Great|Philosopher:400,700");
+
+:root {
+    --trim-color: #34B484;
+}
+
+footer#footer {
+    background-color: #000;
+}
+
+.article-link {
+    background: #000;
+    color: #fff;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.03);
+}
+
+.footer-nav a {
+    color: #fff;
+}
+
+/* Nav */
+.header-nav ul li a {
+    color: #000;
+}
+.btn-open:after {
+    color: #000;
+}

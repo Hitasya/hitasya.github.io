@@ -1,0 +1,12 @@
+.article-link {
+    width: 95%;
+    border-radius: 1%;
+    overflow: hidden;
+}
+    .article-link__image {
+        background-size: cover;
+        background-position: center;
+        display: block;
+        min-height: 220px;
+        width: 100%;
+    }

@@ -1,6 +1,6 @@
-@import "base.css";
-@import "layout.css";
-@import "module.css";
-@import "state.css";
-@import "theme.css";
+@import "main--base.css";
+@import "main--layout.css";
+@import "main--module.css";
+@import "main--state.css";
+@import "main--theme.css";
   
