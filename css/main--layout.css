@@ -1,11 +1,10 @@
-main#flex-container {
-    display: flex; flex-direction: column;
-    align-items: center;
+main#body {
+    display: flex; flex-direction: column; justify-content: center;
     margin: auto;
 }
 
 @media screen and (min-width: 1080px) {
-    main#flex-container {
+    main#body {
         width: 1080px;
     }
 }
